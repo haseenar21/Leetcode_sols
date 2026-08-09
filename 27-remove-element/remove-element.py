@@ -7,7 +7,6 @@ class Solution(object):
         """
         n = len(nums)
         k=0
-        counter = 0 
         for i in range(0,n):
             if nums[i] != val:
                 nums[k] = nums[i]
