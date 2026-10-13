@@ -6,25 +6,22 @@ class Solution(object):
         """
         stack = []
         for ch in s:
-            if ch == '(' or ch == '{' or ch == '[':
+            if ch == "{" or ch == "(" or ch == "[":
                 stack.append(ch)
-
+            
             else:
                 if not stack:
                     return False
 
                 top = stack.pop()
-
-                if ch == ')' and top != '(':
+                if ch == "}" and top != "{":
+                    return False
+                
+                elif ch == ")" and top != "(":
                     return False
 
-                elif ch == '}' and top != '{':
-                    return False
-
-                elif ch == ']' and top != '[':
+                elif ch == "]" and top != "[":
                     return False
 
         return len(stack) == 0
-
-                
-
+    
